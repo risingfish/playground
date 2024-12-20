@@ -1,0 +1,24 @@
+// Recursion
+function findMinWeight(weights, d, count = 0) {
+    // Write your code here
+    const sortedArray = weights.sort().reverse();
+
+    sortedArray[0] = Math.floor(sortedArray[0] / 2);
+
+    if (count >= d) {
+        return weights.reduce((accumulator, current) => accumulator + current, 0);
+    } else {
+        return findMinWeight(sortedArray, d, ++count);
+    }
+}
+
+// "Dynamic"
+function findMinWeights(weights, d) {
+    for (let i = 0; i <= d; i++) {
+        weights.sort().reverse();
+        weights[0] = Math.floor(sortedArray[0] / 2);
+    }
+}
+
+const result = findMinWeight([30, 20, 25], 5);
+console.log(result);
