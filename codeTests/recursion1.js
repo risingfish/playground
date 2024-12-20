@@ -1,3 +1,9 @@
+/**
+ * This is an exercise to build a tree from a flat array. It is a little usual because in this
+ * type of data structure, the child usually holds the reference to the parent. In this example
+ * the parent holds references to the children.
+ */
+
 const departments = [
     { id: 1, name: "Sales", subDepts: [6, 7, 8] },
     { id: 2, name: "Human Resources", subDepts: [] },
@@ -22,10 +28,9 @@ function findDepartmentById(id, departments) {
 }
 
 /**
- *
+ * Searhc for child departments for a given department.
  * @param id
  * @param departments
- * @param level Current level of recursiojn
  */
 function getChildDepartments(id, departments) {
     const parent = findDepartmentById(id, departments);
@@ -35,6 +40,11 @@ function getChildDepartments(id, departments) {
     return parent;
 }
 
+/**
+ * Entry point for building a tree from a flat array of data
+ * @param departments
+ * @return {*}
+ */
 function displayAllHierarchies(departments) {
     const rootDepartments = departments.filter(
         (department) => !departments.some((dept) => dept.subDepts.includes(department.id))

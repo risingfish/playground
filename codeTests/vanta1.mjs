@@ -18,7 +18,6 @@ Output should be:
  Completed
  Completed
  Overdue by 3 days.
-
  */
 
 function checkOverdue(start, window, completed, check) {
