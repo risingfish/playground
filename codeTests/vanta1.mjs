@@ -1,5 +1,5 @@
 /*
-Test for looping over traing data
+Test for looping over training data, and checking for completion, and overdue
 
 If an employee starts on day x, they need to take a training course by day y, by z days into their employment
 If an HR person needs checks they need to e if a person is out of schedule, and by how many days.
@@ -20,9 +20,6 @@ Output should be:
  Overdue by 3 days.
 
  */
-
-
-
 
 function checkOverdue(start, window, completed, check) {
     const overdueDay = start + window;
