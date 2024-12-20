@@ -1,7 +1,5 @@
 // Recursion
 function findMinWeightRecursive(weights, d, count = 0) {
-    //  This a simple custom sort function that sorts in revers order. Way more
-    //  efficient than using both .sort() and .reverse().
     const sortedArray = weights.sort((a,b) => b - a);
     console.log(sortedArray, 'recursive top value is',  sortedArray[0]);
     sortedArray[0] = Math.floor(sortedArray[0] / 2);
