@@ -7,9 +7,7 @@ function findMinWeight(weights, d, count = 0) {
     sortedArray[0] = Math.floor(sortedArray[0] / 2);
 
     if (count >= d) {
-        return weights.reduce((accumulator, current) => {
-            return accumulator + current;
-        }, 0);
+        return weights.reduce((accumulator, current) => accumulator + current, 0);
     } else {
         return findMinWeight(sortedArray, d, ++count);
     }
