@@ -39,9 +39,9 @@ function longestPalindrome(s) {
     return longest;
 }
 
-// console.log('Final ', longestPalindrome('ccc'));
-// console.log('Final ', longestPalindrome('racecar'));
-// console.log('Final ', longestPalindrome('zxracecarzxc'));
+console.log('Final ', longestPalindrome('ccc'));
+console.log('Final ', longestPalindrome('racecar'));
+console.log('Final ', longestPalindrome('ghjzx1racecar1zxc'));
 console.log('Final ', longestPalindrome("a"));
-// console.log('Final ', longestPalindrome("aaaa"));
-// console.log('Final ', longestPalindrome("gaddz"));
+console.log('Final ', longestPalindrome("aaaa"));
+console.log('Final ', longestPalindrome("gaddz"));
