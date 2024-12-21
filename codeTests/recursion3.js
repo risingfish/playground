@@ -13,37 +13,35 @@ function isPalindrome(s) {
 }
 
 function longestPalindrome(s) {
-    if (s.length === 1) return 1;
-    if (s.length === 2 && s[0] === s[1]) return 2;
+    let longest = '';
 
-    let longest = 0;
-    const store = {}
+    // loop through string once
+    for (let i = 0; i < s.length; i++) {
+        // use two different starting positions to
+        // account for even or odd strings
+        checkLeftAndRight(i, i);
+        checkLeftAndRight(i, i + 1);
+    }
 
-    s.forEach((item, left) => {
-        let right = 0;
-        let stop = false;
-
-        if (item === s[left + 1]) {
-            console.log('Is neighbor palindrome')
-            // Set right to the neighbor index
-            right = left + 1;
-
-            // Set longest palindrome to 2 if this is all we have found.
-            longest = (longest > 2) ? longest : 2;
+    function checkLeftAndRight(left, right) {
+        while (left >= 0 && right < s.length && s[left] === s[right]) {
+            // subtract left from right and add one to get current
+            // length of substring
+            if (right - left + 1 > longest.length) {
+                // set longest to current substring
+                longest = s.slice(left, right + 1);
+            }
+            left--;
+            right++;
         }
-
-        // while (stop) {
-        //     if ((left - 1) < 0 || right >= s.length) {
-        //         stop = true;
-        //         break;
-        //     }
-        //
-        //     let l = left - 1;
-        //     let r = right + 1;
-        // }
-    });
+    }
 
     return longest;
 }
 
-console.log(isPalindrome("raccecr"));
+// console.log('Final ', longestPalindrome('ccc'));
+// console.log('Final ', longestPalindrome('racecar'));
+// console.log('Final ', longestPalindrome('zxracecarzxc'));
+console.log('Final ', longestPalindrome("a"));
+// console.log('Final ', longestPalindrome("aaaa"));
+// console.log('Final ', longestPalindrome("gaddz"));
