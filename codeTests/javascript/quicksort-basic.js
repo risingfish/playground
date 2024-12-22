@@ -1,4 +1,4 @@
-// Random number generator
+// Random number array generator
 function genArray(len, max = 100) {
     const result = []
     for (let i = 0; i < len; i++) {
@@ -7,16 +7,12 @@ function genArray(len, max = 100) {
     return result;
 }
 
-// Just a counter to see recursion count
-let rec = 0;
-
 /**
  * Basic quicksort function in Javascript
  * @param arr
  * @return {*|*[]}
  */
 function quicksort(arr) {
-    rec++;
     // base case
     if (arr.length <= 1) return arr;
 
@@ -31,7 +27,11 @@ function quicksort(arr) {
 
 
 const arr = genArray(100);
+// arr = [9,6,2,7,3,8,5,1,4,0]; // An easy array to visually see changes.
+let originalArr = [...arr];
 const start = new Date();
+const result = quicksort(arr);
 const end = (new Date()).getTime() - start.getTime();
-console.log(quicksort(arr), rec);
+console.log('Orig  array: ', originalArr);
+console.log('Final array: ', result);
 console.log('Took ' + end + 'ms to run');
