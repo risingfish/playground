@@ -11,7 +11,7 @@ function genArray(len, max = 100) {
 let rec = 0;
 
 /**
- * BAsic quicksort function in Javascript
+ * Basic quicksort function in Javascript
  * @param arr
  * @return {*|*[]}
  */
@@ -21,7 +21,9 @@ function quicksort(arr) {
     if (arr.length <= 1) return arr;
 
     const pivot = arr[Math.floor(arr.length / 2)];
+    // All the values that are lower than the pivot
     const low = arr.filter(x => x < pivot);
+    // All the values that are higher than the pivot
     const high = arr.filter(x => x > pivot);
     return [...quicksort(low), pivot, ...quicksort(high)];
 }
