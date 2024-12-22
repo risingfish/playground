@@ -27,10 +27,10 @@ function quicksort(arr) {
 }
 
 /**
- * Curiosity generated alternative to two .filter() calls. The idea here was to remove
- * one .filter() because it iterates over the entire array every time. It turns out the
- * regeneration of the array that array.splice() does is far more resource intensive
- * than a single iteration. This not a good method.
+ * Curiosity generated alternative to three .filter() calls. The idea here was to remove
+ * two loops by iterating over the entire array only once and modifying it. It turns out
+ * the regeneration of the array that array.splice() does is far more resource intensive
+ * than three filters() iteration. This not a good method.
  *
  * @param arr
  * @return {*|*[]}
@@ -62,6 +62,7 @@ function quicksortSplice(arr) {
 /**
  * This reduces the number of loops per recursion to 1, and
  * should be more efficient than either of the previous variations.
+ *
  * @param arr
  * @return {*|*[]}
  */
