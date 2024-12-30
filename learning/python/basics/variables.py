@@ -19,8 +19,8 @@ print(course[-1])
 print(course[3:8])
 print(course[:8])
 
-first = "Zac"
-last = "Feuerborn"
+first = "Phil"
+last = "Grapes"
 
 full = f"{first} {last}"
 print(full)
@@ -29,3 +29,8 @@ print("Feuerborn" in full)
 gg = "           AAAA           "
 print(gg)
 print(gg.strip())
+
+# swapping variables
+x = 10
+y = 11
+x, y = y, x
