@@ -2,12 +2,12 @@
 # See the query that follows this one.
 select d.dept_no, d.dept_name, dd.manager_first_name, dd.manager_last_name, dd.from_date
 from departments d
-         join (
-    select xdm.dept_no, xdm.from_date, ee.first_name as manager_first_name, ee.last_name as manager_last_name
-    from dept_manager xdm
-             join employees ee on xdm.emp_no = ee.emp_no
-    where xdm.from_date < now() and xdm.to_date > now()
-) dd on d.dept_no = dd.dept_no;
+    join (
+        select xdm.dept_no, xdm.from_date, ee.first_name as manager_first_name, ee.last_name as manager_last_name
+        from dept_manager xdm
+        join employees ee on xdm.emp_no = ee.emp_no
+            where xdm.from_date < now() and xdm.to_date > now()
+        ) dd on d.dept_no = dd.dept_no;
 
 # Cleaner and and more efficient version of the query.
 select d.dept_no, d.dept_name, e.first_name as manager_first_name, e.last_name as manager_last_name, dm.from_date
