@@ -35,7 +35,7 @@ from departments d
 #     group by sde.dept_no) totals on totals.dept_no = d.dept_no;
 
 
-# calculating min, max, and averga salaries for each department
+# Calculating min, max, and average salaries for each department
 select d.*, min(ds.salary), avg(ds.salary), max(ds.salary)
 from departments d
          join (select de.dept_no, de.emp_no, (select salary from salaries s where de.emp_no = s.emp_no and s.from_date < now() and s.to_date > now()) as salary
