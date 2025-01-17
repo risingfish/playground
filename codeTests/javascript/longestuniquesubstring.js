@@ -1,5 +1,5 @@
 /**
- * This ia sliding with method for finding the longest substring without repeating characters.
+ * This is a sliding window method for finding the longest substring without repeating characters.
  * 
  * @param {string} s
  * @return {number}
