@@ -4,9 +4,10 @@ function getHighest($value1, $value2, $value3) {
     $values = [$value1, $value2, $value3];
 
     // Find the index of the highest value using array_keys and max
-    $highestIndex = array_keys($values, max($values))[0];
+//    $highestIndex = array_keys($values, max($values))[0];
+//    return $highestIndex;
 
-    return $highestIndex;
+    return array_keys($values, max($values))[0];
 }
 
 // Example usage
