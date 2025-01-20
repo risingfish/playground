@@ -8,6 +8,7 @@ class Point:
     def __str__(self):
         return f"({self.x}, {self.y})"
 
+    # By default Python compares the memory address, so this magic method is required.
     def __eq__(self, other):
         return self.x == other.x and self.y == other.y
 
