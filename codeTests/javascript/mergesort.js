@@ -1,7 +1,5 @@
 /**
- * Merge sort learning. Code for this was found at
- * https://www.doabledanny.com/merge-sort-javascript
- *
+ * Merge sort
  * @type {number[]}
  */
 
