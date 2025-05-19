@@ -12,7 +12,7 @@ function swap(arr, x, y) {
 }
 
 /**
- * Basic quicksort function in Javascript
+ * Basic quicksort function in Javascript without recursion
  * @param arr
  * @param left
  * @param right
@@ -59,7 +59,7 @@ const partition = (arr, left, right) => {
 }
 
 /**
- *
+ * Basick quicksort with recursion
  * @param arr
  * @param left
  * @param right
